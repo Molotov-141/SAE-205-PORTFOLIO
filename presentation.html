@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Présentation | Paul Lecornu</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .profile-header {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            margin-bottom: 4rem;
+            flex-wrap: wrap;
+        }
+
+        .profile-img-container {
+            flex: 0 0 250px;
+            height: 250px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 4px solid var(--accent-color, #10b981);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .profile-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .profile-info {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-size: 0.95rem;
+            color: var(--text-muted, #64748b);
+        }
+
+        .cv-section {
+            margin-bottom: 3.5rem;
+        }
+
+        .timeline-item {
+            padding-left: 2rem;
+            border-left: 2px solid #e2e8f0;
+            position: relative;
+            padding-bottom: 2rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -9px;
+            top: 0;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: var(--accent-color, #10b981);
+            border: 3px solid white;
+        }
+
+        .video-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #f1f5f9;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            color: var(--primary-color, #1e293b);
+            font-weight: 500;
+            transition: background 0.3s;
+        }
+
+        .video-link:hover {
+            background: #e2e8f0;
+        }
+
+        @media (max-width: 768px) {
+            .profile-header {
+                flex-direction: column;
+                text-align: center;
+                gap: 2rem;
+            }
+            .contact-item {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Paul Lecornu</div>
+            <ul class="nav-links">
+                <li><a href="portfolio.html#accueil">Accueil</a></li>
+                <li><a href="presentation.html" style="font-weight: bold; color: #10b981;">Présentation</a></li>
+                <li><a href="competences.html">Compétences</a></li>
+                <li><a href="portfolio.html#projet-101">Projets</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container" style="padding-top: 120px; padding-bottom: 60px;">
+        
+        <header class="profile-header">
+            <div class="profile-img-container">
+                <img src="data.jpeg" alt="Portrait de Paul Lecornu">
+            </div>
+            <div class="profile-info">
+                <h1 style="font-size: 2.5rem; margin-bottom: 0.5rem;">Paul Lecornu</h1>
+                <p style="font-size: 1.25rem; color: #10b981; font-weight: 500; margin-bottom: 1.5rem;">Étudiant en BUT Réseaux et Télécommunications</p>
+                <p>Passionné par les infrastructures réseau et le développement, je poursuis actuellement mon cursus à l'IUT de Caen (site d'Ifs). Mon parcours est marqué par une curiosité pour les nouvelles technologies, allant de la cybersécurité à l'intelligence artificielle.</p>
+                
+                <div class="contact-grid">
+                    <div class="contact-item">
+                        <span>📍 Bayeux, France</span>
+                    </div>
+                    <div class="contact-item">
+                        <span>📧 paul.lecornu08@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <span>📞 +33 7 69 38 39 43</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="grid-2">
+            <div class="cv-section">
+                <h2 class="section-title" style="text-align: left; margin-bottom: 2rem;">Formation</h2>
+                
+                <div class="timeline-item">
+                    <h4 style="margin: 0; color: #1e293b;">BUT Réseaux et Télécommunications</h4>
+                    <p style="color: #10b981; font-weight: 500; font-size: 0.9rem;">2025 — Aujourd'hui | IUT Caen (Ifs)</p>
+                    <p style="margin-top: 0.5rem; font-size: 0.95rem;">Spécialisation dans l'administration des systèmes, la conception d'architectures réseaux et la programmation réseau.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h4 style="margin: 0; color: #1e293b;">Baccalauréat</h4>
+                    <p style="color: #10b981; font-weight: 500; font-size: 0.9rem;">2022 — 2025 | Lycée Jeanne d'Arc, Bayeux</p>
+                </div>
+
+                <h2 class="section-title" style="text-align: left; margin-top: 3rem; margin-bottom: 2rem;">Certifications & Langues</h2>
+                <div class="card">
+                    <ul class="list-bullet" style="margin-top: 0;">
+                        <li><strong>Cyber :</strong> Certification ANSSI (SecNumacadémie)</li>
+                        <li><strong>Langues :</strong> Français (Natif), Anglais (B2), Espagnol (Notions)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="cv-section">
+                <h2 class="section-title" style="text-align: left; margin-bottom: 2rem;">Expériences Notables</h2>
+                
+                <div class="card" style="margin-bottom: 1.5rem;">
+                    <h4 style="margin-bottom: 0.5rem;">Projet IA : Reconnaissance Artistique</h4>
+                    <p style="font-size: 0.9rem; color: #64748b; margin-bottom: 1rem;">2023 | Projet Autonome</p>
+                    <p>Développement d'une intelligence artificielle capable de différencier des dessins de sculptures. Utilisation de Python et de bibliothèques spécialisées en réseaux de neurones.</p>
+                </div>
+
+                <div class="card" style="margin-bottom: 1.5rem;">
+                    <h4 style="margin-bottom: 0.5rem;">Infrastructure Réseau d'Entreprise</h4>
+                    <p style="font-size: 0.9rem; color: #64748b; margin-bottom: 1rem;">2025 | IUT Caen</p>
+                    <p>Configuration de commutateurs via Putty, gestion du câblage physique et mise en œuvre de solutions de sécurité pour un réseau local.</p>
+                </div>
+
+                <div class="card">
+                    <h4 style="margin-bottom: 1rem;">Présentation Vidéo</h4>
+                    <p style="margin-bottom: 1.5rem;">J'ai réalisé une courte vidéo présentant mon profil et mes motivations pour le secteur des télécoms :</p>
+                    <a href="https://tinyurl.com/lecornupaul" target="_blank" class="video-link">
+                        <span>▶️ Regarder ma vidéo</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <div class="container" style="text-align: center; padding: 2rem 0; border-top: 1px solid #e2e8f0;">
+            <p>© 2025 | Paul Lecornu — Portfolio Professionnel</p>
+        </div>
+    </footer>
+
+</body>
+</html>
